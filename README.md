@@ -1,3 +1,20 @@
+# USER GUIDE ANALISIS SENTIMEN BERBASIS WEB PADA PRODUK KECANTIKAN DENGAN PENDEKATAN DEEP LEARNING
+
+Untuk membuat penelitian ini terdapat tiga tahap utama, yaitu akuisisi data, pembuatan analisis sentimen menggunakan LSTM, dan pembuatan website
+
+## SCRAPING
+Pengumpulan data dilakukan melalui proses scraping menggunakan library python yaitu BeautifulSoup4. Data yang digunakan pada penelitian ini adalah dataset ulasan produk kategori fragrance merek lokal yang diambil dari situs https://femaledaily.com/.
+
+## ANALISIS SENTIMEN MENGGUNAKAN LSTM
+Pembuatan analisis sentimen menggunakan LSTM melalui beberapa tahap di antaranya adalah preprocessing, konversi kalimat menggunakan lexicon dan manual labeling, embedding menggunakan IndoBERT, pemisahan data (data train & test), pembuatan dan pelatihan model menggunakan LSTM, dan pengujian akurasi sistem menggunakan confusion matrix.
+
+## WEBSITE
+Pembuatan website website menggunakan Streamlit. Website meminta input berupa link ulasan produk fragrance merek lokal dari website Female Daily, lalu ouput-nya akan berupa analisis sentimen ulasan produk fragrance tersebut (positif, netral, negatif). Fitur lain dari website ini dapat menampilkan persentase hasil masing-masing sentimen dan rating berdasarkan hasil model LSTM.
+
+# REQUIREMENTS
+
+Berikut adalah library dan environment yang diperlukan dalam membuat penelitian ini:
+
 ## SCRAPING
 
 ```
@@ -9,7 +26,7 @@ from urllib.request import urlopen
 import pandas as pd
 ```
 
-## LSTM ANALISIS SENTIMEN
+## ANALISIS SENTIMEN MENGGUNAKAN LSTM
 
 ```
 pip install nltk
